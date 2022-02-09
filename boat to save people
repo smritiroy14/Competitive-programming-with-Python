@@ -1,0 +1,23 @@
+#boat to save people
+
+def boattosavepeople(arr,limit):
+    arr_Size=len(arr)
+    left=0
+    right=arr_Size-1
+    boat=0
+    arr.sort()
+    while left<=right:
+        if (left==right):
+            boat=boat+1
+            break
+        if (arr[left]+arr[right])<=limit:
+            left=left+1
+            #boat=boat+1
+        right=right-1
+        boat=boat+1
+    return boat 
+
+arr=[3,2,2,1]
+limit=3
+
+print(boattosavepeople(arr,limit))
