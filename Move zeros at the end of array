@@ -1,0 +1,14 @@
+#move zeros to end
+
+def movezeroatend(arr):
+    array_Size=len(arr)
+    j=0
+    for i in arr:
+        if i!=0:
+            arr[j]=i
+            j=j+1
+    for i in range(j,array_Size):
+        arr[i]=0
+    return arr                  
+arr=[0,1,2,0,4,0,5]
+print(movezeroatend(arr))
